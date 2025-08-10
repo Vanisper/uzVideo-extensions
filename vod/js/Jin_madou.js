@@ -86,8 +86,8 @@ class madouClass extends WebApiBase {
                 let videos = []
                 for (let index = 0; index < allVideo.length; index++) {
                     const element = allVideo[index]
-                    let vodUrl = element.querySelector('a')?.attributes['href'] ?? ''
-                    let vodPic = element.querySelector('img')?.attributes['data-src'] ?? ''
+                    let vodUrl = element.querySelector('a')?.getAttribute('href') ?? ''
+                    let vodPic = element.querySelector('img')?.getAttribute('data-src') ?? ''
                     let vodName = element.querySelector('h2')?.text ?? ''
                     let vodDiJiJi = element.querySelector('.post-view')?.text ?? ''
 
@@ -203,8 +203,8 @@ class madouClass extends WebApiBase {
                 let videos = []
                 for (let index = 0; index < allVideo.length; index++) {
                     const element = allVideo[index]
-                    let vodUrl = element.querySelector('a')?.attributes['href'] ?? ''
-                    let vodPic = element.querySelector('img')?.attributes['data-src'] ?? ''
+                    let vodUrl = element.querySelector('a')?.getAttribute('href') ?? ''
+                    let vodPic = element.querySelector('img')?.getAttribute('data-src') ?? ''
                     let vodName = element.querySelector('h2')?.text ?? ''
                     let vodDiJiJi = element.querySelector('.post-view')?.text ?? ''
 
