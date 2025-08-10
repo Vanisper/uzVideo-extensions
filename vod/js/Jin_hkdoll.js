@@ -39,7 +39,7 @@ class hkdollClass extends WebApiBase {
             let proData = pro.data
             if (proData) {
                 let document = parse(proData)
-                let allClass = document.querySelector('.scrollbar').querySelectorAll('a')
+                let allClass = document.querySelectorAll('.scrollbar a')
                 let list = []
                 for (let index = 0; index < allClass.length; index++) {
                     const element = allClass[index]
