@@ -102,7 +102,7 @@ async function getClassList(args) {
                 if (type_name === '首页') {
                     url = 'home'
                 } else {
-                    url = element.attributes['href']
+                    url = element.getAttribute('href') ?? ''
 
                     url = combineUrl(url)
                     url = url.slice(0, -5)

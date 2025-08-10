@@ -210,7 +210,7 @@ async function getVideoDetail(args) {
 
                 vod_play_url += element.text
                 vod_play_url += '$'
-                vod_play_url += element.attributes['href']
+                vod_play_url += element.getAttribute('href') ?? ''
                 vod_play_url += '#'
             }
 

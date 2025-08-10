@@ -71,7 +71,7 @@ async function getClassList(args) {
           continue
         }
         var type_name = element.text
-        var url = element.attributes['href']
+        var url = element.getAttribute('href') ?? ''
 
         url = combineUrl(url)
 
@@ -252,7 +252,7 @@ async function getVideoDetail(args) {
 
         vod_play_url += element.text
         vod_play_url += '$'
-        vod_play_url += element.attributes['href']
+        vod_play_url += element.getAttribute('href') ?? ''
         vod_play_url += '#'
       }
 

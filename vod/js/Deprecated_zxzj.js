@@ -50,7 +50,7 @@ class zxzjClass extends WebApiBase {
                         continue
                     }
                     var type_name = element.text
-                    var url = element.attributes['href']
+                    var url = element.getAttribute('href') ?? ''
 
                     if (url.length > 0 && type_name.length > 0) {
                         var videoClass = new VideoClass()
@@ -272,7 +272,7 @@ class zxzjClass extends WebApiBase {
 
                     vod_play_url += element.text
                     vod_play_url += '$'
-                    vod_play_url += element.attributes['href']
+                    vod_play_url += element.getAttribute('href') ?? ''
                     vod_play_url += '#'
                 }
 

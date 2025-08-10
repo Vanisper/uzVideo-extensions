@@ -53,7 +53,7 @@ class saohuoClass extends WebApiBase {
                     let url
                     if (type_name === '动漫') {
                         url = '/list/4.html'
-                    } else url = element.attributes['href']
+                    } else url = element.getAttribute('href') ?? ''
 
                     url = this.combineUrl(url)
                     // url = url.slice(0, -5)
@@ -253,7 +253,7 @@ class saohuoClass extends WebApiBase {
                         const element = playLinks[j]
                         vod_play_url += element.text
                         vod_play_url += '$'
-                        vod_play_url += element.attributes['href']
+                        vod_play_url += element.getAttribute('href') ?? ''
                         vod_play_url += '#'
                     }
                     vod_play_from += from.trim() + '$$$'

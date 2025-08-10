@@ -50,7 +50,7 @@ class madouClass extends WebApiBase {
                         continue
                     }
                     let type_name = element.text
-                    let url = element.attributes['href']
+                    let url = element.getAttribute('href') ?? ''
 
                     if (url.length > 0 && type_name.length > 0) {
                         let videoClass = new VideoClass()

@@ -48,7 +48,7 @@ class hkdollClass extends WebApiBase {
                         continue
                     }
                     let type_name = element.text
-                    let url = element.attributes['href']
+                    let url = element.getAttribute('href') ?? ''
 
                     // url = this.combineUrl(url)
                     // url = url.slice(0, -5)
